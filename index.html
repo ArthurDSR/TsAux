@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <link rel="stylesheet" type="text/css" href="../css/slider.css">
+  <link rel="icon" href="../images/logo(2).svg" type="image/svg">
+  <title>EcoDesc</title>
+</head>
+
+<body>
+<header >
+  <div class="header_content">
+    <a href="/" class="ms-4   logo">
+      <img src="../images/logo.svg" alt="Logo EcoDesc">
+    </a>
+
+
+    <nav class="nav pt-3 hidden ">
+      <ul class="nav_list ">
+        <li class="nav_item dropdown">
+          <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            início
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="">sobre nós</a></li>
+            <li>
+              <hr  class="dropdown-divider">
+            </li>
+            <li class="nav-item dropend">
+              <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                sobre o <i>e-lixo</i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="pages/informacao.html">o que é <i>e-lixo</i> </a></li>
+                <li><a class="dropdown-item" href="pages/producao-lixo.html">geração de <i>e-lixo</i></a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      </li>
+      <li class="nav_item dropdown ">
+        <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i>eco</i>ponto
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+          <li>
+            <a class="dropdown-item" href="pages/ecoponto.html">sobre</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="pages/descarte.html">perto de você</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav_item dropdown ">
+        <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i>eco</i>virtual
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+          <li class="nav_item dropdown">
+            <a href="pages/kids.html" class="dropdown-item">área <i>kids</i></a>
+          </li>
+          <li class="nav_item dropdown">
+            <a class="dropdown-item" href="pages/ecoponto.html">laboratório virtual</a>
+          </li>
+        </ul>
+      </li>
+      <li class="nav_item">
+        <a class="nav_link" href="pages/artigos.html">Mudar Nome Artigo</a>
+      </li>
+
+      <li class="nav_item ">
+        <a href="pages/avalie.html" class="nav_link"><i>eco</i>empresas</a>
+      </li>
+      <li class="nav_item dropdown">
+        <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          sobre o <i>e-lixo</i>
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+          <li>
+            <a class="dropdown-item" href="pages/informacao.html">visão geral</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="pages/producao-lixo.html">como surge?</a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="nav_item dropdown">
+        <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          contato
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li>
+            <a class="dropdown-item" href="pages/contato.html">entre em contato</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="pages/parceiros.html">seja um parceiro</a>
+          </li>
+        </ul>
+      </li>
+
+      </ul>
+    </nav>
+
+    <section class="login-menu">
+      <div id="divUserName">
+        <button onclick="login()" class="px-3 py-2 me-4 "  id="button-login"> login </button>
+      </div>
+
+      <div class="hamburger me-5" onclick="openMenu()" >
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </section>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+<main>
+<section class="inicio">
+    <!-- Coluna à esquerda -->
+    <div class="side-column">
+      <div class="content">
+        <h1>Reinvente,<br> Recicle,<br> Revolucione!</h1>
+        <p class="bordao"><i>Eletrônicos descartados, futuro recuperado: recicle pelo amanhã sustentável!</i></p>
+        <a id="saiba-mais" href="pages/informacao.html">Saiba mais</a>
+      </div>
+    </div>
+    <!-- Imagem de fundo ocupando o restante da tela -->
+    <div class="background-image"></div>
+    <!-- Restante do seu conteúdo -->
+  </section>
+
+  <div class="slider">
+    <div class="list">
+
+      <div class="item" style="--position: 1"><img src="images/slider1_1.png" alt=""></div>
+      <div class="item" style="--position: 2"><img src="images/slider1_2.png" alt=""></div>
+      <div class="item" style="--position: 3"><img src="images/slider1_3.png" alt=""></div>
+      <div class="item" style="--position: 4"><img src="images/slider1_4.png" alt=""></div>
+      <div class="item" style="--position: 5"><img src="images/slider1_5.png" alt=""></div>
+      <div class="item" style="--position: 6"><img src="images/slider1_6.png" alt=""></div>
+      <div class="item" style="--position: 7"><img src="images/slider1_7.png" alt=""></div>
+      <div class="item" style="--position: 8"><img src="images/slider1_8.png" alt=""></div>
+      <div class="item" style="--position: 9"><img src="images/slider1_9.png" alt=""></div>
+      <div class="item" style="--position: 10"><img src="images/slider1_10.png" alt=""></div>
+
+    </div>
+  </div>
+
+
+
+</main>
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="js/content-login.js"></script>
+  <script src="js/loginButton.js"></script>
+<script src="js/rodape.js"></script>
+<script>
+  function openMenu() {
+
+    const hamburgerElement = document.querySelector('.hamburger');
+    const navElement = document.querySelector('nav');
+    const navListElement = document.querySelector('.nav_list');
+
+    if (navElement.classList.contains("hidden")) {
+      navElement.classList.remove("hidden");
+      navElement.style.transform = "translateY(-100%)";
+      setTimeout(() => {
+        navElement.style.transition = "transform 0.3s ease-in-out";
+        navElement.style.transform = "translateY(0)";
+        navListElement.classList.add("nav_list--open");
+      }, 10); // Pequeno atraso para garantir que a transição seja aplicada
+    } else {
+      navElement.style.transition = "transform 0.3s ease-in-out";
+      navElement.style.transform = "translateY(-100%)";
+      navListElement.classList.remove("nav_list--open");
+      setTimeout(() => {
+        navElement.classList.add("hidden");
+      }, 300); // Tempo da animação
+    }
+
+    hamburgerElement.classList.toggle("hamburger--open");
+  }
+</script>
+</body>
+
+</html>
