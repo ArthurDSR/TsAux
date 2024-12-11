@@ -32,6 +32,7 @@ async function mostrarArtigos(pesquisa) {
     const novaDiv = document.createElement("div");
     novaDiv.classList.add("formatar-div");
     const titulo = document.createElement("h3");
+    titulo.classList.add("text-center");
     const linkEncontrado = document.createElement("a");
     const link = document.createElement("a");
 
