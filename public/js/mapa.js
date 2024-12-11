@@ -108,6 +108,13 @@ const pontosDeDescarte = [
     "",
     []
   ),
+  new PontoDeDescarte(
+    "CEFET Fabriciano",
+    "",
+    "R. Dezenove de Novembro, 121 - Centro, Timóteo - MG",
+    "",
+    []
+  ),
 ];
 
 var position = navigator.geolocation.getCurrentPosition(success, error, {
