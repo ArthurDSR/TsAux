@@ -18,6 +18,7 @@ let divTesoura = document.getElementById("div-tesoura");
 let tesouraImg = document.getElementById("tesoura");
 let botaoFase2 = document.getElementById("btnRedirect");
 let sectionFerramenta = document.getElementById("fase1");
+let roupasDiv = document.querySelector(".roupas");
 
 divJaleco.style.animation = "piscando-verde 2.5s infinite";
 divJaleco.style.border = "2px solid transparent";
@@ -154,6 +155,8 @@ divPersonagem.addEventListener("drop", (e) => {
     divLuva.style.display = "none";
     divJaleco.style.display = "none";
     sectionFerramenta.style.display = "flex";
+    roupasDiv.remove();
+    personagemImg.style.width = "30%";
   } else if (draggedElement == "jaleco") {
     divJaleco.style.animation = "";
     divJaleco.style.border = "";
