@@ -17,6 +17,7 @@ let alicateImg = document.getElementById("alicate");
 let divTesoura = document.getElementById("div-tesoura");
 let tesouraImg = document.getElementById("tesoura");
 let botaoFase2 = document.getElementById("btnRedirect");
+let sectionFerramenta = document.getElementById("fase1");
 
 divJaleco.style.animation = "piscando-verde 2.5s infinite";
 divJaleco.style.border = "2px solid transparent";
@@ -149,18 +150,25 @@ divPersonagem.addEventListener("drop", (e) => {
     divSoprador.style.border = "2px solid transparent";
     divPlaca.style.animation = "piscando-verde 2.5s infinite";
     divPlaca.style.border = "2px solid transparent";
+    divOculos.style.display = "none";
+    divLuva.style.display = "none";
+    divJaleco.style.display = "none";
+    sectionFerramenta.style.display = "flex";
   } else if (draggedElement == "jaleco") {
     divJaleco.style.animation = "";
     divJaleco.style.border = "";
     divLuva.style.animation = "piscando-verde 2.5s infinite";
     divLuva.style.border = "2px solid transparent";
     personagemImg.src = `../images/lab-virtual/lab-virtual/personagens/${personagemSelecionado}/personagem_jaleco.png`;
+    divJaleco.style.display = "none";
   } else if (draggedElement == "luva") {
     personagemImg.src = `../images/lab-virtual/lab-virtual/personagens/${personagemSelecionado}/personagem_jaleco_luva.png`;
     divLuva.style.animation = "";
     divLuva.style.border = "";
     divOculos.style.animation = "piscando-verde 2.5s infinite";
     divOculos.style.border = "2px solid transparent";
+    divLuva.style.display = "none";
+    divJaleco.style.display = "none";
   }
 });
 

@@ -1,291 +1,471 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-bs-theme="dark">
+  <html lang="pt-br" data-bs-theme="dark">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+        crossorigin="anonymous"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      />
+      <link rel="stylesheet" type="text/css" href="../css/index.css" />
+      <link rel="stylesheet" type="text/css" href="../css/sobre-nos.css" />
+      <link rel="stylesheet" type="text/css" href="../css/cards-inicio.css" />
+      <link rel="icon" href="../images/logo(2).svg" type="image/svg" />
+      <title>EcoDesc</title>
+    </head>
 
-<html lang="pt-br" data-bs-theme="dark">
+    <body>
+      <header>
+        <div class="header_content">
+          <a href="/" class="ms-4 logo">
+            <img src="../images/logo.svg" alt="Logo EcoDesc" />
+          </a>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
-          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" type="text/css" href="../css/index.css">
-    <link rel="stylesheet" type="text/css" href="../css/sobre-nos.css">
-    <link rel="stylesheet" type="text/css" href="../css/cards-inicio.css">
-    <link rel="icon" href="../images/logo(2).svg" type="image/svg">
-    <title>EcoDesc</title>
-</head>
-
-<body>
-<header>
-    <div class="header_content">
-        <a href="/" class="ms-4   logo">
-            <img src="../images/logo.svg" alt="Logo EcoDesc">
-        </a>
-
-
-        <nav class="nav pt-3 hidden ">
-            <ul class="nav_list ">
-                <li class="nav_item dropdown">
-                    <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        início
+          <nav class="nav pt-3 hidden">
+            <ul class="nav_list">
+              <li class="nav_item dropdown">
+                <a
+                  class="nav_link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  início
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#sobre">sobre nós</a></li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li class="nav-item dropend">
+                    <a
+                      class="nav_link dropdown-toggle"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      sobre o <i>e-lixo</i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#sobre">sobre nós</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li class="nav-item dropend">
-                            <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                               aria-expanded="false">
-                                sobre o <i>e-lixo</i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="pages/informacao.html">o que é?</a>
-                                </li>
-                                <li><a class="dropdown-item" href="pages/vproducao-lixo.html">geração</a></li>
-                            </ul>
-                        </li>
+                      <li>
+                        <a class="dropdown-item" href="pages/informacao.html"
+                          >o que é?</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="pages/vproducao-lixo.html"
+                          >geração</a
+                        >
+                      </li>
                     </ul>
-                </li>
-                <li class="nav_item dropdown ">
-                    <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i>eco</i>ponto
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li>
-                            <a class="dropdown-item" href="pages/ecoponto.html">sobre</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="pages/descarte.html">perto de você</a>
-                        </li>
-                    </ul>
-                </li>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav_item dropdown">
+                <a
+                  class="nav_link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i>eco</i>ponto
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li>
+                    <a class="dropdown-item" href="pages/ecoponto.html"
+                      >sobre</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/descarte.html"
+                      >perto de você</a
+                    >
+                  </li>
+                </ul>
+              </li>
 
-                <li class="nav_item dropdown ">
-                    <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i>eco</i>virtual
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li class="nav_item dropdown">
-                            <a href="pages/kids.html" class="dropdown-item"><i>eco</i>kids</a>
-                        </li>
-                        <li class="nav_item dropdown">
-                            <a class="dropdown-item" href="pages/lab-virtual.html">laboratório virtual</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav_item">
-                    <a class="nav_link" href="pages/artigos.html"><i>eco</i>paper</a>
-                </li>
+              <li class="nav_item dropdown">
+                <a
+                  class="nav_link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i>eco</i>virtual
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li class="nav_item dropdown">
+                    <a href="pages/kids.html" class="dropdown-item"
+                      ><i>eco</i>kids</a
+                    >
+                  </li>
+                  <li class="nav_item dropdown">
+                    <a class="dropdown-item" href="pages/lab-virtual.html"
+                      >laboratório virtual</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav_item">
+                <a class="nav_link" href="pages/artigos.html"
+                  ><i>eco</i>paper</a
+                >
+              </li>
 
-                <li class="nav_item ">
-                    <a href="pages/avalie.html" class="nav_link"><i>eco</i>empresas</a>
-                </li>
+              <li class="nav_item">
+                <a href="pages/avalie.html" class="nav_link"
+                  ><i>eco</i>empresas</a
+                >
+              </li>
 
-                <li class="nav_item dropdown">
-                    <a class="nav_link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        contato
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <li>
-                            <a class="dropdown-item" href="pages/contato.html">entre em contato</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="pages/parceiros.html">seja um parceiro</a>
-                        </li>
-                    </ul>
-                </li>
-
+              <li class="nav_item dropdown">
+                <a
+                  class="nav_link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  contato
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li>
+                    <a class="dropdown-item" href="pages/contato.html"
+                      >entre em contato</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="pages/parceiros.html"
+                      >seja um parceiro</a
+                    >
+                  </li>
+                </ul>
+              </li>
             </ul>
-        </nav>
+          </nav>
 
-        <section class="login-menu">
+          <section class="login-menu">
             <div id="divUserName">
-                <button onclick="login()" class="px-3 py-2 me-4 " id="button-login"> login</button>
+              <button
+                onclick="login()"
+                class="px-3 py-2 me-4"
+                id="button-login"
+              >
+                login
+              </button>
             </div>
 
             <div class="hamburger me-5" onclick="openMenu()">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
             </div>
-        </section>
-    </div>
-</header>
-
-
-<main>
-    <section class="zoom">
-        <img src="images/fundo-inicio.jpeg" alt="Imagem de fundo" class="background">
-        <div class="overlay-content text-center">
-            <h1>Reinvente, Recicle, Revolucione!</h1>
-            <p class="text-center"><i>Eletrônicos descartados, futuro recuperado: recicle pelo amanhã sustentável!</i></p>
-            <div class="content">
-                <a id="saiba-mais" href="pages/informacao.html">Saiba mais</a>
-            </div>
+          </section>
         </div>
-    </section>
+      </header>
 
-    <section class="container mt-5">
-        <h2 class="text-center">O que você encontra por aqui?</h2>
-        <div class="card-container">
+      <main>
+        <section class="zoom">
+          <img
+            src="images/fundo-inicio.jpeg"
+            alt="Imagem de fundo"
+            class="background"
+          />
+          <div class="overlay-content text-center">
+            <h1>Reinvente, Recicle, Revolucione!</h1>
+            <p class="text-center">
+              <i
+                >Eletrônicos descartados, futuro recuperado: recicle pelo amanhã
+                sustentável!</i
+              >
+            </p>
+            <div class="content">
+              <a id="saiba-mais" href="pages/informacao.html">Saiba mais</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="container mt-5">
+          <h2 class="text-center">O que você encontra por aqui?</h2>
+          <div class="card-container">
             <a href="pages/ecoponto.html" class="card">
-                <img src="images/card-ecoponto.jpeg" class="card-img-top" alt="EcoPonto">
-                <div class="card-body">
-                    <h5 class="card-title"><i>eco</i>pontos</h5>
-                    <p class="card-text">Encontre os locais próximos de você para descartar corretamente seu <i>e</i>-lixo.</p>
-                </div>
+              <img
+                src="images/card-ecoponto.jpeg"
+                class="card-img-top"
+                alt="EcoPonto"
+              />
+              <div class="card-body">
+                <h5 class="card-title"><i>eco</i>pontos</h5>
+                <p class="card-text">
+                  Encontre os locais próximos de você para descartar
+                  corretamente seu <i>e</i>-lixo.
+                </p>
+              </div>
             </a>
             <a href="pages/kids.html" class="card">
-                <img src="images/card-ecovirtual.jpeg" class="card-img-top" alt="EcoVirtual">
-                <div class="card-body">
-                    <h5 class="card-title"><i>eco</i>kids</h5>
-                    <p class="card-text">Um ambiente lúdico e interativo para conhecer mais sobre o <i>e</i>lixo</p>
-                </div>
+              <img
+                src="images/card-ecovirtual.jpeg"
+                class="card-img-top"
+                alt="EcoVirtual"
+              />
+              <div class="card-body">
+                <h5 class="card-title"><i>eco</i>kids</h5>
+                <p class="card-text">
+                  Um ambiente lúdico e interativo para conhecer mais sobre o
+                  <i>e</i>lixo
+                </p>
+              </div>
             </a>
             <a href="pages/avalie.html" class="card">
-                <img src="images/card-empresa.jpeg" class="card-img-top" alt="EcoEmpresa">
-                <div class="card-body">
-                    <h5 class="card-title"><i>eco</i>empresas</h5>
-                    <p class="card-text">Descubra e avalie empresas!</p>
-                </div>
+              <img
+                src="images/card-empresa.jpeg"
+                class="card-img-top"
+                alt="EcoEmpresa"
+              />
+              <div class="card-body">
+                <h5 class="card-title"><i>eco</i>empresas</h5>
+                <p class="card-text">Descubra e avalie empresas!</p>
+              </div>
             </a>
             <a href="pages/artigos.html" class="card">
-                <img src="images/card-ecopaper.jpeg" class="card-img-top" alt="Ecopaper (artigos)">
-                <div class="card-body">
-                    <h5 class="card-title"><i>eco</i>paper</h5>
-                    <p class="card-text">Se aventure no mundo da ciência com vários artigos!</p>
-                </div>
+              <img
+                src="images/card-ecopaper.jpeg"
+                class="card-img-top"
+                alt="Ecopaper (artigos)"
+              />
+              <div class="card-body">
+                <h5 class="card-title"><i>eco</i>paper</h5>
+                <p class="card-text">
+                  Se aventure no mundo da ciência com vários artigos!
+                </p>
+              </div>
             </a>
             <a href="pages/informacao.html" class="card">
-                <img src="images/card-info.jpeg" class="card-img-top" alt="Sobre o e-lixo">
-                <div class="card-body">
-                    <h5 class="card-title">Sobre o <i>e</i>-lixo</h5>
-                    <p class="card-text">Descubra mais sobre um dos grandes problemas do século!</p>
-                </div>
+              <img
+                src="images/card-info.jpeg"
+                class="card-img-top"
+                alt="Sobre o e-lixo"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Sobre o <i>e</i>-lixo</h5>
+                <p class="card-text">
+                  Descubra mais sobre um dos grandes problemas do século!
+                </p>
+              </div>
             </a>
             <a href="pages/lab-virtual.html" class="card">
-                <img src="images/card-lab.jpeg" class="card-img-top" alt="laboratorio virtual">
-                <div class="card-body">
-                    <h5 class="card-title">Laboratório Virtual</h5>
-                    <p class="card-text">Se torne um cientista com nosso lab-virtual!</p>
-                </div>
+              <img
+                src="images/card-lab.jpeg"
+                class="card-img-top"
+                alt="laboratorio virtual"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Laboratório Virtual</h5>
+                <p class="card-text">
+                  Se torne um cientista com nosso lab-virtual!
+                </p>
+              </div>
             </a>
-        </div>
-    </section>
+          </div>
+        </section>
 
-<section id="sobre" class="sobre-nos mt-2">
-    <div class="container">
-        <h2 class="text-center">Sobre Nós</h2>
+        <section id="sobre" class="sobre-nos mt-2">
+          <div class="container">
+            <h2 class="text-center">Sobre Nós</h2>
 
+            <div class="row">
+              <p class="text-center">
+                A <i>EcoDesc</i> é uma plataforma não governamental, sem fins
+                lucrativos, que visa a propagação da informação sobre o descarte
+                correto e a reciclagem de e-lixo. Desenvolvida por uma equipe de
+                estudantes do CEFET-MG Campus Timóteo, a plataforma é destinada
+                à conscientização de seus usuários, disponibilizando informações
+                em linguagem simples, artigos científicos, fórum para pesquisa,
+                um mapa que informa os ecopontos na região do Vale do Aço e área
+                infantil, além de contar com um laboratório virtual!
+              </p>
+              <div class="row mt-4">
+                <div class="col-sm text-center">
+                  <img
+                    src="images/arthur.jpeg"
+                    class="rounded-circle"
+                    alt="Integrante 1"
+                    width="150"
+                    height="150"
+                  />
+                  <h5>Arthur Davi</h5>
+                  <p>
+                    estudante do ensino técnico integrado em Desenvolvimento de
+                    Sistemas; possui diversas medalhas acadêmicas e é muito
+                    interessado em tecnologia. Integra a equipe de programação
+                    da plataforma, sugerindo melhorias, oferecendo soluções,
+                    dedicando-se inteiramente ao nosso sonho por muitas
+                    madrugadas.
+                  </p>
+                </div>
+                <div class="col-sm text-center">
+                  <img
+                    src="images/pedro.jpeg"
+                    class="rounded-circle"
+                    alt="Integrante 2"
+                    width="150"
+                    height="150"
+                  />
+                  <h5>Pedro Augusto</h5>
+                  <p>
+                    graduando em Engenharia de Computação; Pedro, mais conhecido
+                    como Pedrinho, integra a equipe de programação da plataforma
+                    e é responsável pela maior parte de sua programação. Com
+                    maior experiência na área, tê-lo em nossa equipe permitiu
+                    que a plataforma se desenvolvesse de forma que não
+                    esperávamos, sendo possível adicionar diversas interações
+                    que contribuíram para uma grande melhoria na EcoDesc.
+                  </p>
+                </div>
+                <div class="col-sm text-center">
+                  <img
+                    src="images/clara.jpeg"
+                    class="rounded-circle"
+                    alt="Integrante 3"
+                    width="150"
+                    height="150"
+                  />
+                  <h5>Clara Muniz</h5>
+                  <p>
+                    estudante do ensino técnico integrado em Desenvolvimento de
+                    Sistemas; participa de um projeto de pesquisa de literatura
+                    chamado "Leia Mulheres" e, juntamente com a colega Ana Luiza
+                    Bina, compõe a equipe de pesquisa da plataforma. Responsável
+                    pela troca de informações com a empresa BioVale Reciclagens,
+                    nossa parceira.
+                  </p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm text-center">
+                  <img
+                    src="images/andrey.jpeg"
+                    class="rounded-circle"
+                    alt="Integrante 4"
+                    width="150"
+                    height="150"
+                  />
+                  <h5>Andrey Zacarias</h5>
+                  <p>
+                    estudante do ensino técnico integrado em Desenvolvimento de
+                    Sistemas; é excelente desenhista, responsável por várias
+                    artes da plataforma, paleta de cores e criação da identidade
+                    visual. Selecionando minuciosamente as cores e elaborando os
+                    mínimos detalhes de como queríamos a plataforma, Andrey fez
+                    um belíssimo trabalho para que a plataforma trouxesse aos
+                    usuários conforto e estímulo visual.
+                  </p>
+                </div>
 
-        <p class="text-center">A <i>EcoDesc</i> é uma plataforma não governamental, sem fins lucrativos, que visa a propagação da informação sobre o descarte correto e a reciclagem de e-lixo. Desenvolvida por uma equipe de estudantes do CEFET-MG Campus Timóteo, a plataforma é destinada à conscientização de seus usuários, disponibilizando informações em linguagem simples, artigos científicos, fórum para pesquisa,
-            um mapa que informa os ecopontos na região do Vale do Aço e área infantil, além
-            de contar com um laboratório virtual!</p>
-        <div class="row mt-4">
-            <div class="col-sm-4 text-center">
-                <img src="images/arthur.jpeg" class="rounded-circle" alt="Integrante 1" width="150" height="150">
-                <h5>Arthur Davi</h5>
-                <p>estudante do ensino técnico integrado em Desenvolvimento de Sistemas;
-                    possui diversas medalhas acadêmicas e é muito interessado em tecnologia.
-                    Integra a equipe de programação da plataforma, sugerindo melhorias, oferecendo soluções,
-                    dedicando-se inteiramente ao nosso sonho por muitas madrugadas.  </p>
+                <div class="col-sm text-center">
+                  <img
+                    src="images/ana.jpeg"
+                    class="rounded-circle"
+                    alt="Integrante 5"
+                    width="150"
+                    height="150"
+                  />
+                  <h5>Ana Luiza Bina</h5>
+                  <p>
+                    estudante do ensino técnico integrado em Desenvolvimento de
+                    Sistemas; apaixonada por leitura e faz parte da equipe de
+                    pesquisas da plataforma, articulando as informações a fim de
+                    garantir maior acessibilidade e facilitar o entendimento,
+                    principalmente das informações referentes aos ecopontos, com
+                    o auxílio do professor Matheus Pereira.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="col-sm-4 text-center">
-                <img src="images/pedro.jpeg" class="rounded-circle" alt="Integrante 2" width="150" height="150">
-                <h5>Pedro Augusto</h5>
-                <p>graduando em Engenharia de Computação; Pedro, mais conhecido como Pedrinho, integra a equipe de programação da plataforma e é responsável pela maior parte de sua programação. Com maior experiência na área, tê-lo em nossa equipe permitiu que a plataforma se desenvolvesse de forma que não esperávamos, sendo possível adicionar diversas interações que contribuíram para uma grande melhoria na EcoDesc. </p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <img src="images/clara.jpeg" class="rounded-circle" alt="Integrante 3" width="150" height="150">
-                <h5>Clara Muniz</h5>
-                <p>estudante do ensino técnico integrado em Desenvolvimento de Sistemas; participa de um projeto de
-                    pesquisa de literatura chamado "Leia Mulheres" e, juntamente com a colega Ana Luíza Bina, compõe
-                    a equipe de pesquisa da plataforma.
-                    Responsável pela troca de informações com a empresa BioVale Reciclagens, nossa parceira.</p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <img src="images/andrey.jpeg" class="rounded-circle" alt="Integrante 4" width="150" height="150">
-                <h5>Andrey Zacarias </h5>
-                <p>estudante do ensino técnico integrado em Desenvolvimento de Sistemas; é excelente desenhista,
-                    responsável por várias artes da plataforma, paleta de cores e criação da identidade visual.
-                    Selecionando minuciosamente as cores e elaborando os mínimos detalhes de como  queríamos a plataforma,
-                    Andrey fez um belíssimo trabalho para que a plataforma trouxesse aos usuários conforto e estímulo visual. </p>
-            </div>
-            <div class="col-sm-4 text-center">
-                <img src="images/ana.jpeg" class="rounded-circle" alt="Integrante 5" width="150" height="150">
-                <h5>Ana Luiza Bina</h5>
-                <p>estudante do ensino técnico integrado em Desenvolvimento de Sistemas; apaixonada por leitura
-                    e faz parte da equipe de pesquisas da plataforma, articulando as informações a fim de garantir maior
-                    acessibilidade e facilitar o entendimento,
-                    principalmente das informações referentes aos ecopontos, com o auxílio do professor Matheus Pereira. </p>
-            </div>
-        </div>
-        <div class="row mt-5 ">
-            <div class="col-sm-12">
+            <div class="row mt-5">
+              <div class="col-sm-12">
                 <h3 class="text-center">Nossa missão</h3>
-                <p class="text-center mb-2">Conscientizar as pessoas em
-                    relação ao descarte correto do lixo eletrônico, um dos maiores problemas
-                    ambientais da atualidade devido ao alto índice de toxidade de certos componentes
-                    químicos que compõem tais equipamentos. </p>
+                <p class="text-center mb-2">
+                  Conscientizar as pessoas em relação ao descarte correto do
+                  lixo eletrônico, um dos maiores problemas ambientais da
+                  atualidade devido ao alto índice de toxidade de certos
+                  componentes químicos que compõem tais equipamentos.
+                </p>
                 <h3 class="text-center">Nossos valores</h3>
-                <ul class="text-center ">
-                    <li><p>Propagar a informação.</p></li>
-                    <li><p>Propagar informação de forma gratuita e democrática, pois acreditamos que somente
-                        dessa forma conseguiremos ter melhor qualidade de vida, em detrimento do descuido para
-                        com a natureza e com nós mesmos.</p>
-                    </li>
-                    <li><p>Contribuir para o crescimento das empresas de reciclagem que fazem bons trabalhos.</p></li>
+                <ul class="text-center">
+                  <li><p>Propagar a informação.</p></li>
+                  <li>
+                    <p>
+                      Propagar informação de forma gratuita e democrática, pois
+                      acreditamos que somente dessa forma conseguiremos ter
+                      melhor qualidade de vida, em detrimento do descuido para
+                      com a natureza e com nós mesmos.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Contribuir para o crescimento das empresas de reciclagem
+                      que fazem bons trabalhos.
+                    </p>
+                  </li>
                 </ul>
+              </div>
             </div>
-        </div>
-    </div>
-</section>
-</main>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+          </div>
+        </section>
+      </main>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-<script src="js/content-login.js"></script>
-<script src="js/loginButton.js"></script>
-<script src="js/rodape.js"></script>
-<script>
-    function openMenu() {
+        crossorigin="anonymous"
+      ></script>
+      <script src="js/content-login.js"></script>
+      <script src="js/loginButton.js"></script>
+      <script src="js/rodape.js"></script>
+      <script>
+        function openMenu() {
+          const hamburgerElement = document.querySelector(".hamburger");
+          const navElement = document.querySelector("nav");
+          const navListElement = document.querySelector(".nav_list");
 
-        const hamburgerElement = document.querySelector('.hamburger');
-        const navElement = document.querySelector('nav');
-        const navListElement = document.querySelector('.nav_list');
-
-        if (navElement.classList.contains("hidden")) {
+          if (navElement.classList.contains("hidden")) {
             navElement.classList.remove("hidden");
             navElement.style.transform = "translateY(-100%)";
             setTimeout(() => {
-                navElement.style.transition = "transform 0.3s ease-in-out";
-                navElement.style.transform = "translateY(0)";
-                navListElement.classList.add("nav_list--open");
+              navElement.style.transition = "transform 0.3s ease-in-out";
+              navElement.style.transform = "translateY(0)";
+              navListElement.classList.add("nav_list--open");
             }, 10); // Pequeno atraso para garantir que a transição seja aplicada
-        } else {
+          } else {
             navElement.style.transition = "transform 0.3s ease-in-out";
             navElement.style.transform = "translateY(-100%)";
             navListElement.classList.remove("nav_list--open");
             setTimeout(() => {
-                navElement.classList.add("hidden");
+              navElement.classList.add("hidden");
             }, 300); // Tempo da animação
+          }
+
+          hamburgerElement.classList.toggle("hamburger--open");
         }
 
-        hamburgerElement.classList.toggle("hamburger--open");
-    }
         function applyZoomEffect() {
-            var scroll = window.scrollY;
-            var zoomImage = document.querySelector('.zoom img');
-            zoomImage.style.transform = `scale(${1 + scroll / 1000})`;
-            zoomImage.style.objectPosition = 'center';
+          var scroll = window.scrollY;
+          var zoomImage = document.querySelector(".zoom img");
+          zoomImage.style.transform = `scale(${1 + scroll / 1000})`;
+          zoomImage.style.objectPosition = "center";
         }
 
-// Adiciona o ouvinte de evento de rolagem quando a página for carregada
-        window.addEventListener('scroll', applyZoomEffect);
-
-</script>
-</body>
-
+        // Adiciona o ouvinte de evento de rolagem quando a página for carregada
+        window.addEventListener("scroll", applyZoomEffect);
+      </script>
+    </body>
+  </html>
 </html>

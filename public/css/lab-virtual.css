@@ -55,12 +55,15 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-sizing: border-box;
     margin-bottom: 10px;
+    width: 100%;
+;
 }
 
 .d-epi {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -68,6 +71,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 
 .d-ferramenta .card {
@@ -242,7 +246,7 @@ body {
 }
 
 .personagem {
-    width: 20%; /* Largura padrão dos personagens */
+    width: 60%; /* Largura padrão dos personagens */
     margin: 10px; /* Espaçamento ao redor dos personagens */
 }
 
@@ -279,6 +283,12 @@ body {
 .organizar-epi{
     display: flex;
     flex-direction: row ;
+    justify-self: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 4%;
+    margin-right: 4%;
+
 }
 
 .roupas {

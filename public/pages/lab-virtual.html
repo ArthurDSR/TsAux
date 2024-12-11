@@ -20,6 +20,11 @@
     <title>EcoDesc</title>
 </head>
 <body>
+<div class=" position-absolute top-0 end-0">
+    <a class="btn" href="kids.html">
+        <i class="bi bi-x-lg"></i>
+    </a>
+</div>
 <section
         draggable="false"
         class="seletor-personagem mb-2"
@@ -73,37 +78,38 @@
 </section>
 
 
-<div id="equipamentos" style="display: none">
-  <section class="organizar-epi">
-    <section class="roupas" id="fase-epi">
-        <div class="column card d-epi">
-            <div class="item image-border" id="div-jaleco" draggable="true">
-                <img
-                        src="../images/lab-virtual/lab-virtual/epi/jaleco.png"
-                        class="epi"
-                        id="jaleco"
-                />
+<div id="equipamentos" class="justify-content-center mt-5" style="display: none">
+    <section class="organizar-epi row ">
+        <section class="roupas col-sm" id="fase-epi">
+            <div class="column card d-epi ">
+                <div class="item image-border" id="div-jaleco" draggable="true">
+                    <img
+                            src="../images/lab-virtual/lab-virtual/epi/jaleco.png"
+                            class="epi"
+                            id="jaleco"
+                    />
+                </div>
+                <div class="item" id="div-luva" draggable="true">
+                    <img
+                            src="../images/lab-virtual/lab-virtual/epi/luva.png"
+                            class="epi"
+                            id="luva"
+                    />
+                </div>
+                <div class="item" id="div-oculos" draggable="true">
+                    <img
+                            src="../images/lab-virtual/lab-virtual/epi/oculos.png"
+                            class="epi"
+                            id="oculos"
+                    />
+                </div>
             </div>
-            <div class="item" id="div-luva" draggable="true">
-                <img
-                        src="../images/lab-virtual/lab-virtual/epi/luva.png"
-                        class="epi"
-                        id="luva"
-                />
-            </div>
-            <div class="item" id="div-oculos" draggable="true">
-                <img
-                        src="../images/lab-virtual/lab-virtual/epi/oculos.png"
-                        class="epi"
-                        id="oculos"
-                />
-            </div>
+        </section>
+
+        <div draggable="false" class="div-personagem col-sm" id="div-personagem">
+            <img src="#" class="personagem" id="personagem"/>
         </div>
     </section>
-    <div draggable="false" class="div-personagem" id="div-personagem">
-        <img src="#" class="personagem" id="personagem"/>
-    </div>
-  </section>
 
     <section class="d-ferramenta" id="fase1">
         <div class="column card d-fase1">

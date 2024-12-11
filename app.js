@@ -31,4 +31,4 @@ app.use(
 app.use(router);
 createTable();
 
-app.listen(3001);
+app.listen(3002);
