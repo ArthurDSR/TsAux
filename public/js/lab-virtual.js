@@ -1,246 +1,216 @@
-
-const appliedEPIs = new Set();
 let personagemSelecionado = null;
-let personagemGenero = null;
+let divEquipamentos = document.getElementById("equipamentos");
+let divPersonagem = document.getElementById("div-personagem");
+let divOculos = document.getElementById("div-oculos");
+let divJaleco = document.getElementById("div-jaleco");
+let divLuva = document.getElementById("div-luva");
+let oculosImg = document.getElementById("oculos");
+let jalecoImg = document.getElementById("jaleco");
+let luvaImg = document.getElementById("luva");
+let personagemImg = document.getElementById("personagem");
+let divSoprador = document.getElementById("div-soprador");
+let sopradorImg = document.getElementById("soprador");
+let divPlaca = document.getElementById("div-placa");
+let placaImg = document.getElementById("placa");
+let divAlicate = document.getElementById("div-alicate");
+let alicateImg = document.getElementById("alicate");
+let divTesoura = document.getElementById("div-tesoura");
+let tesouraImg = document.getElementById("tesoura");
+let botaoFase2 = document.getElementById("btnRedirect");
 
-function selecaoPersonagem(personagem) {
-    document.querySelectorAll('.personagem').forEach(card => {
-        card.classList.remove('selecionado');
-    });
+divJaleco.style.animation = "piscando-verde 2.5s infinite";
+divJaleco.style.border = "2px solid transparent";
 
-    document.getElementById(`personagem${personagem}`).classList.add('selecionado');
-    personagemSelecionado = personagem;
-    personagemGenero = personagem === 'M' ? 'masculino' : 'feminino';
-    document.getElementById('btn-start').classList.remove("invisible");
+// Função para selecionar um personagem
+function selecaoPersonagem(genero) {
+  // Remove destaque dos personagens previamente selecionados
+  document.getElementById("personagemF").classList.remove("selecionado");
+  document.getElementById("personagemM").classList.remove("selecionado");
+
+  // Destaque o personagem selecionado
+  if (genero === "F") {
+    personagemSelecionado = "feminino";
+    document.getElementById("personagemF").classList.add("selecionado");
+  } else if (genero === "M") {
+    personagemSelecionado = "masculino";
+    document.getElementById("personagemM").classList.add("selecionado");
+  }
+
+  // Torna visível o botão de continuar
+  document.getElementById("btn-start").classList.remove("invisible");
 }
 
-function iniciarJogo() {
-    document.getElementById('btn-start').classList.add("invisible");
-    document.getElementById('seletor-personagem').classList.add("invisible");
-    const personagem = document.getElementById('personagem');
-    personagem.src = `../images/lab-virtual/personagens/${personagemGenero}/personagem.png`;
-    document.getElementById('fase-epi').classList.remove("invisible");
-}
-
+// Função para salvar a seleção do personagem
 function salvarSelecao() {
-    console.log(personagemSelecionado);
-    iniciarJogo();
+  if (personagemSelecionado) {
+    // Lógica para redirecionar ou inicializar próxima etapa
+    document.getElementById("seletor-personagem").classList.add("invisible");
+    document.getElementById("fase-epi").classList.remove("invisible");
+
+    // Atualiza a imagem do personagem na próxima fase
+    divEquipamentos.style.display = "block";
+    const personagemImg = document.getElementById("personagem");
+    personagemImg.src =
+      personagemSelecionado === "feminino"
+        ? "../images/personagemF.png"
+        : "../images/personagemM.png";
+  } else {
+    alert("Por favor, selecione um personagem antes de continuar.");
+  }
 }
 
-document.addEventListener("dragstart", (e) => {
-    if (e.target.classList.contains("epi")) {
-        e.target.classList.add("dragging");
-    }
+// Eventos de dragstart nos equipamentos
+divLuva.addEventListener("dragstart", (e) => {
+  dragImg(e);
+  e.dataTransfer.setData("draggedElement", "luva");
 });
 
-document.addEventListener("dragend", (e) => {
-    if (e.target.classList.contains("epi")) {
-        e.target.classList.remove("dragging");
-    }
+divJaleco.addEventListener("dragstart", (e) => {
+  dragImg(e);
+  e.dataTransfer.setData("draggedElement", "jaleco");
 });
 
-const personagem = document.getElementById("personagem");
-
-
-personagem.addEventListener("dragover", (e) => {
-    e.preventDefault();
+divOculos.addEventListener("dragstart", (e) => {
+  dragImg(e);
+  e.dataTransfer.setData("draggedElement", "oculos");
 });
 
-personagem.addEventListener("drop", (e) => {
-    e.preventDefault();
-    const dragging = document.querySelector(".dragging");
-    if (dragging && dragging.classList.contains("epi")) {
-        const epiId = dragging.id;
-        appliedEPIs.add(epiId);
-        updatePersonagemImage();
-        dragging.remove();
-    }
+divSoprador.addEventListener("dragstart", (e) => {
+  dragImg(e);
+  e.dataTransfer.setData("draggedElement", "soprador");
 });
 
-function updatePersonagemImage() {
-    const epiCombination = Array.from(appliedEPIs).sort().join('_');
-    personagem.src = `../images/lab-virtual/personagens/${personagemGenero}/personagem_${epiCombination}.png`;
-    document.addEventListener("dragstart", (e) => {
-        if (e.target.classList.contains("ferramenta") && e.target.getAttribute("draggable") === "true") {
-            e.target.classList.add("dragging");
-        }
-    });
-}
-document.addEventListener("dragstart", (e) => {
-    if (e.target.classList.contains("ferramenta") && e.target.getAttribute("draggable") === "true") {
-        e.target.classList.add("dragging");
-    }
+divPlaca.addEventListener("dragstart", (e) => {
+  dragImg(e);
+  e.dataTransfer.setData("draggedElement", "placa");
 });
 
-document.addEventListener("dragend", (e) => {
-    if (e.target.classList.contains("ferramenta")) {
-        e.target.classList.remove("dragging");
-    }
+divAlicate.addEventListener("dragstart", (e) => {
+  dragImg(e);
+  e.dataTransfer.setData("draggedElement", "alicate");
 });
 
-const placaMae = document.getElementById("placa-mae");
-const tesouraMecanica = document.getElementById("tesoura-mecanica");
-
-placaMae.addEventListener("dragover", (e) => {
-    e.preventDefault();
+divTesoura.addEventListener("dragstart", (e) => {
+  dragImg(e);
+  e.dataTransfer.setData("draggedElement", "tesoura");
 });
 
-placaMae.addEventListener("drop", (e) => {
-    e.preventDefault();
-    const dragging = document.querySelector(".dragging");
-    if (dragging) {
-        const ferramentaId = dragging.id;
-        if (ferramentaId === "soprador-termico") {
-            dragging.removeAttribute("draggable");
-            placaMae.style.filter = "brightness(0.5) sepia(1) hue-rotate(-50deg) saturate(5)";
-        } else if (ferramentaId === "alicate") {
-            dragging.removeAttribute("draggable");
-            placaMae.src = "../images/lab-virtual/placas/placa_nua.png";
-            placaMae.style.filter = "none"; // Voltar à cor normal
-            placaMae.setAttribute("draggable", "true");
-        }
-    }
-});
-
-let tesouraPassagens = 0;
-
-tesouraMecanica.addEventListener("dragover", (e) => {
-    e.preventDefault();
-});
-
-tesouraMecanica.addEventListener("drop", (e) => {
-    e.preventDefault();
-    const dragging = document.querySelector(".dragging");
-    if (dragging && dragging.id === "placa-mae") {
-        tesouraPassagens++;
-        if (tesouraPassagens === 1) {
-            placaMae.src = "../images/lab-virtual/placas/placa_cortada_verticalmente.png";
-        } else if (tesouraPassagens === 2) {
-            placaMae.src = "../images/lab-virtual/placas/placa_cortada_horizontalmente.png";
-            placaMae.removeAttribute("draggable");
-        }
-    }
-
-const appliedEPIs = new Set();
-let personagemSelecionado = null;
-let personagemGenero = null;
-
-function selecaoPersonagem(personagem) {
-    document.querySelectorAll('.personagem').forEach(card => {
-        card.classList.remove('selecionado');
-    });
-
-    document.getElementById(`personagem${personagem}`).classList.add('selecionado');
-    personagemSelecionado = personagem;
-    personagemGenero = personagem === 'M' ? 'masculino' : 'feminino';
-    document.getElementById('btn-start').classList.remove("invisible");
-}
-
-function iniciarJogo() {
-    document.getElementById('btn-start').classList.add("invisible");
-    document.getElementById('seletor-personagem').classList.add("invisible");
-    const personagem = document.getElementById('personagem');
-    personagem.src = `../images/lab-virtual/personagens/${personagemGenero}/personagem.png`;
-    document.getElementById('fase-epi').classList.remove("invisible");
-}
-
-function salvarSelecao() {
-    console.log(personagemSelecionado);
-    iniciarJogo();
-}
-
-document.addEventListener("dragstart", (e) => {
-    if (e.target.classList.contains("epi")) {
-        e.target.classList.add("dragging");
-    }
-});
-
-document.addEventListener("dragend", (e) => {
-    if (e.target.classList.contains("epi")) {
-        e.target.classList.remove("dragging");
-    }
-});
-
-const personagem = document.getElementById("personagem");
-
-
-personagem.addEventListener("dragover", (e) => {
-    e.preventDefault();
-});
-
-personagem.addEventListener("drop", (e) => {
-    e.preventDefault();
-    const dragging = document.querySelector(".dragging");
-    if (dragging && dragging.classList.contains("epi")) {
-        const epiId = dragging.id;
-        appliedEPIs.add(epiId);
-        updatePersonagemImage();
-        dragging.remove();
-    }
-});
-
-function updatePersonagemImage() {
-    const epiCombination = Array.from(appliedEPIs).sort().join('_');
-    personagem.src = `../images/lab-virtual/personagens/${personagemGenero}/personagem_${epiCombination}.png`;
-    document.addEventListener("dragstart", (e) => {
-        if (e.target.classList.contains("ferramenta") && e.target.getAttribute("draggable") === "true") {
-            e.target.classList.add("dragging");
-        }
-    });
-}
-document.addEventListener("dragstart", (e) => {
-    if (e.target.classList.contains("ferramenta") && e.target.getAttribute("draggable") === "true") {
-        e.target.classList.add("dragging");
-    }
-});
-
-document.addEventListener("dragend", (e) => {
-    if (e.target.classList.contains("ferramenta")) {
-        e.target.classList.remove("dragging");
-    }
-});
-
-const placaMae = document.getElementById("placa-mae");
-const tesouraMecanica = document.getElementById("tesoura-mecanica");
-
-placaMae.addEventListener("dragover", (e) => {
-    e.preventDefault();
-});
-
-placaMae.addEventListener("drop", (e) => {
-    e.preventDefault();
-    const dragging = document.querySelector(".dragging");
-    if (dragging) {
-        const ferramentaId = dragging.id;
-        if (ferramentaId === "soprador-termico") {
-            dragging.removeAttribute("draggable");
-            placaMae.style.filter = "brightness(0.5) sepia(1) hue-rotate(-50deg) saturate(5)";
-        } else if (ferramentaId === "alicate") {
-            dragging.removeAttribute("draggable");
-            placaMae.src = "../images/lab-virtual/placas/placa_nua.png";
-            placaMae.style.filter = "none"; // Voltar à cor normal
-            placaMae.setAttribute("draggable", "true");
-        }
-    }
-});
-
-let tesouraPassagens = 0;
-
-tesouraMecanica.addEventListener("dragover", (e) => {
+// Eventos de dragover nos containers de equipamentos (permitir o arrasto)
+divLuva.addEventListener("dragover", (e) => {
+  dragImg(e);
   e.preventDefault();
 });
 
-tesouraMecanica.addEventListener("drop", (e) => {
-    e.preventDefault();
-    const dragging = document.querySelector(".dragging");
-    if (dragging && dragging.id === "placa-mae") {
-        tesouraPassagens++;
-        if (tesouraPassagens === 1) {
-            placaMae.src = "../images/lab-virtual/placas/placa_cortada_verticalmente.png";
-        } else if (tesouraPassagens === 2) {
-            placaMae.src = "../images/lab-virtual/placas/placa_cortada_horizontalmente.png";
-            placaMae.removeAttribute("draggable");
-        }
-    }
-
+divJaleco.addEventListener("dragover", (e) => {
+  dragImg(e);
+  e.preventDefault();
 });
+
+divOculos.addEventListener("dragover", (e) => {
+  dragImg(e);
+  e.preventDefault();
+});
+
+divSoprador.addEventListener("dragover", (e) => {
+  dragImg(e);
+  e.preventDefault();
+});
+
+divAlicate.addEventListener("dragover", (e) => {
+  dragImg(e);
+  e.preventDefault();
+});
+
+// Evento de dragover no divPersonagem (permitir o drop)
+divPersonagem.addEventListener("dragover", (e) => {
+  e.preventDefault(); // Permite o drop
+});
+
+divPlaca.addEventListener("dragover", (e) => {
+  dragImg(e);
+  e.preventDefault();
+});
+
+divTesoura.addEventListener("dragover", (e) => {
+  dragImg(e);
+  e.preventDefault();
+});
+
+// Evento de drop no divPersonagem
+divPersonagem.addEventListener("drop", (e) => {
+  e.preventDefault();
+  const draggedElement = e.dataTransfer.getData("draggedElement");
+
+  if (draggedElement == "oculos") {
+    personagemImg.src = `../images/lab-virtual/lab-virtual/personagens/${personagemSelecionado}/personagem_jaleco_luva_oculos.png`;
+    divOculos.style.animation = "";
+    divOculos.style.border = "";
+    divSoprador.style.animation = "piscando-verde 2.5s infinite";
+    divSoprador.style.border = "2px solid transparent";
+    divPlaca.style.animation = "piscando-verde 2.5s infinite";
+    divPlaca.style.border = "2px solid transparent";
+  } else if (draggedElement == "jaleco") {
+    divJaleco.style.animation = "";
+    divJaleco.style.border = "";
+    divLuva.style.animation = "piscando-verde 2.5s infinite";
+    divLuva.style.border = "2px solid transparent";
+    personagemImg.src = `../images/lab-virtual/lab-virtual/personagens/${personagemSelecionado}/personagem_jaleco.png`;
+  } else if (draggedElement == "luva") {
+    personagemImg.src = `../images/lab-virtual/lab-virtual/personagens/${personagemSelecionado}/personagem_jaleco_luva.png`;
+    divLuva.style.animation = "";
+    divLuva.style.border = "";
+    divOculos.style.animation = "piscando-verde 2.5s infinite";
+    divOculos.style.border = "2px solid transparent";
+  }
+});
+
+divPlaca.addEventListener("drop", (e) => {
+  e.preventDefault();
+  const draggedElement = e.dataTransfer.getData("draggedElement");
+
+  if (draggedElement === "soprador") {
+    // Aplica o filtro para tornar a imagem vermelha
+    placaImg.style.filter = "sepia(1) saturate(5) hue-rotate(-50deg)";
+    divSoprador.style.animation = "";
+    divSoprador.style.border = "";
+    divAlicate.style.animation = "piscando-verde 2.5s infinite";
+    divAlicate.style.border = "2px solid transparent";
+  } else if (draggedElement === "alicate") {
+    placaImg.src = `../images/lab-virtual/lab-virtual/placas/placa_nua.png`;
+    placaImg.style.filter = "";
+    placaImg.classList.add("placa-nua");
+    divAlicate.style.animation = "";
+    divAlicate.style.border = "";
+    divTesoura.style.animation = "piscando-verde 2.5s infinite";
+    divTesoura.style.border = "2px solid transparent";
+  }
+});
+
+divTesoura.addEventListener("drop", (e) => {
+  e.preventDefault();
+  const draggedElement = e.dataTransfer.getData("draggedElement");
+
+  if (draggedElement === "placa" && placaImg.classList.contains("placa-nua")) {
+    placaImg.src = `../images/lab-virtual/lab-virtual/placas/placa_cortada_verticalmente.png`;
+    placaImg.classList.remove("placa-nua");
+    placaImg.classList.add("placa-cortada");
+  } else if (
+    draggedElement === "placa" &&
+    placaImg.classList.contains("placa-cortada")
+  ) {
+    placaImg.src = `../images/lab-virtual/lab-virtual/placas/placa_cortada_horizontalmente.png`;
+    botaoFase2.style.display = "block";
+    divPlaca.style.animation = "";
+    divPlaca.style.border = "";
+    divTesoura.style.animation = "";
+    divTesoura.style.border = "";
+    divAlicate.style.animation = "";
+    divAlicate.style.border = "";
+  }
+});
+
+// Função auxiliar para configurar o drag (evitar imagens padrão)
+const dragImg = (e) => {
+  const emptyImage = new Image();
+  e.dataTransfer.setDragImage(emptyImage, 0, 0);
+};

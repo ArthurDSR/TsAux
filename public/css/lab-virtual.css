@@ -1,14 +1,95 @@
-body{
-    
+body {
     background-size: cover;
     width: 100%;
 }
 
-.seletor-personagem{
+.btn-redirect {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.btn-redirect button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50; /* Cor verde mais claro */
+    border-color: #4caf50; /* Cor da borda verde mais claro */
+    color: white; /* Cor do texto */
+}
+
+.btn-redirect button:hover {
+    background-color: #45a049; /* Cor verde um pouco mais escura ao passar o mouse */
+    border-color: #419941;
+}
+
+.div-personagem {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.personagem {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.ddArea-invisible {
+    display: flex;
+    flex-direction: column;
+}
+
+#fase-epi {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#div-personagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.d-epi {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.d-ferramenta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.d-ferramenta .card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    margin-bottom: 10px;
+}
+
+.card-img {
+    height: 33rem;
+}
+
+.seletor-personagem {
     width: 100%;
 }
 
-.seletor-personagem .container{
+.seletor-personagem .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,20 +99,19 @@ body{
 
 .card.selecionado {
     transform: scale(1.1);
-    border: 2px solid #007BFF; /* Borda azul para destacar o card selecionado */
+    border: 2px solid #007bff; /* Borda azul para destacar o card selecionado */
 }
 
-.aproximar{
+.aproximar {
     transition: transform 0.3s ease-in-out;
 }
 
-.aproximar:hover{
+.aproximar:hover {
     cursor: pointer;
-    transform: scale(1.1) ;
-
+    transform: scale(1.1);
 }
 
-.card{
+.card {
     background-color: rgba(44, 44, 44, 0.72);
 }
 
@@ -46,7 +126,7 @@ body{
     min-width: 300px;
     min-height: 60px;
     display: inline-flex;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Nunito", sans-serif;
     font-size: 22px;
     align-items: center;
     justify-content: center;
@@ -56,7 +136,11 @@ body{
     font-weight: 700;
     color: #313133;
     background: #5cd14f;
-    background: linear-gradient(90deg, rgb(129, 230, 131) 0%, rgb(79, 209, 81) 100%);
+    background: linear-gradient(
+            90deg,
+            rgb(129, 230, 131) 0%,
+            rgb(79, 209, 81) 100%
+    );
     border: none;
     border-radius: 1000px;
     box-shadow: 12px 12px 24px rgba(79, 209, 85, 0.64);
@@ -68,7 +152,7 @@ body{
 }
 
 .botao-animado::before {
-    content: '';
+    content: "";
     border-radius: 1000px;
     min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
@@ -79,7 +163,7 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: all .3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 .botao-animado:hover,
@@ -94,10 +178,11 @@ body{
 }
 
 .botao-animado::after {
-    content: '';
-    width: 30px; height: 30px;
+    content: "";
+    width: 30px;
+    height: 30px;
     border-radius: 100%;
-    border: 6px solid #00FFCB;
+    border: 6px solid #00ffcb;
     position: absolute;
     z-index: -1;
     top: 50%;
@@ -125,6 +210,18 @@ body{
     }
 }
 
+@keyframes piscando-verde {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: green;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
 .invisible {
     display: none;
 }
@@ -139,23 +236,14 @@ body{
 
 .epi:active {
     cursor: grabbing; /* Cursor de "agarrando" quando o EPI está sendo arrastado */
-    transform: scale(1.1); /* Aumenta o tamanho do EPI quando está sendo arrastado */
-}
-
-.epi img {
-    width: 100%; /* Garante que a imagem do EPI ocupe toda a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-.d-epi{
-    width: fit-content;
-    height: fit-content;
+    transform: scale(
+            1.1
+    ); /* Aumenta o tamanho do EPI quando está sendo arrastado */
 }
 
 .personagem {
     width: 20%; /* Largura padrão dos personagens */
     margin: 10px; /* Espaçamento ao redor dos personagens */
-
 }
 
 .epi.dragging {
@@ -173,7 +261,9 @@ body{
 
 .ferramenta:active {
     cursor: grabbing; /* Cursor de "agarrando" quando a ferramenta está sendo arrastada */
-    transform: scale(1.1); /* Aumenta o tamanho da ferramenta quando está sendo arrastada */
+    transform: scale(
+            1.1
+    ); /* Aumenta o tamanho da ferramenta quando está sendo arrastada */
 }
 
 .ferramenta img {
@@ -181,12 +271,20 @@ body{
     height: auto; /* Mantém a proporção da imagem */
 }
 
-.d-ferramenta {
-    width: fit-content;
-    height: fit-content;
-}
-
 .ferramenta.dragging {
     opacity: 0.8;
     z-index: 1000; /* Garante que a ferramenta arrastada fique na frente dos outros elementos */
+}
+
+.organizar-epi{
+    display: flex;
+    flex-direction: row ;
+}
+
+.roupas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
 }

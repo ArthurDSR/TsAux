@@ -821,5 +821,58 @@ h3{
 
 
 
+.zoom{
+    width: 100%;
+    height:110vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.zoom img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    filter: contrast(110%) saturate(80%) brightness(70%) sepia(20%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent);
+
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    object-fit: cover; /* Manter proporções da imagem */
+
+}
+
+.overlay-content p{
+    color: #EDFFED;
+}
+
+.overlay-content h1{
+    color: #EDFFED;
+}
+
+.background {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .background {
+        height: 50vh;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 480px) {
+    .background {
+        height: 30vh;
+        object-fit: cover;
+    }
+}
+
 
 

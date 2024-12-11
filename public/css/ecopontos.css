@@ -18,6 +18,7 @@ main{
 
 .titulo-ecoponto{
     text-align: center;
+    color: #EDFFED;
     font-family:'Courier New', Courier, monospace;
     font-size: max(5vw,30px);
 }

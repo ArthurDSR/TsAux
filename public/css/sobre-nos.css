@@ -1,0 +1,32 @@
+.sobre-nos .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sobre-nos .col-sm-4 {
+    flex: 1 1 30%;
+    max-width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.sobre-nos .row:only-child .col-sm-4 {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+.sobre-nos img.rounded-circle {
+    border: 2px solid #ddd;
+    padding: 5px;
+}
+
+.sobre-nos h5 {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.sobre-nos p {
+    font-size: 1.2em;
+    color: #666;
+}

@@ -29,6 +29,7 @@ main {
 .titulo-contato{
     text-align: center;
     font-family:'Courier New', Courier, monospace;
+    color: #EDFFED;
     font-size: max(5vw,30px);
 }
 
