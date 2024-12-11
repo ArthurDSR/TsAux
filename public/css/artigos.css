@@ -5,6 +5,12 @@
 }
 
 
+#div-artigos{
+  display:flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .imagem-artigos{
   display: flex;
   width: 100%;
