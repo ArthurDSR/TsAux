@@ -30,6 +30,7 @@ async function mostrarArtigos(pesquisa) {
 
   artigos.forEach((artigo) => {
     const novaDiv = document.createElement("div");
+    novaDiv.classList.add("formatar-div");
     const titulo = document.createElement("h3");
     const linkEncontrado = document.createElement("a");
     const link = document.createElement("a");
@@ -47,7 +48,7 @@ async function mostrarArtigos(pesquisa) {
     link.href = artigo.link;
     const textoPreLink = document.createTextNode("Leia mais: ");
     novaDiv.appendChild(textoPreLink);
-    link.textContent = artigo.link;
+    link.textContent = "Clicando aqui.";
     novaDiv.appendChild(link);
 
     divArtigos.appendChild(novaDiv);

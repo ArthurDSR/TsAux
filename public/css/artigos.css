@@ -9,6 +9,18 @@
   display:flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap:10px;
+  width:100%;
+}
+
+.formatar-div{
+  -webkit-box-shadow: 0px 10px 28px 0px rgba(102,97,102,1);
+  -moz-box-shadow: 0px 10px 28px 0px rgba(102,97,102,1);
+  box-shadow: 0px 10px 28px 0px rgba(102,97,102,1);
+  border: solid 2px;
+  border-radius: 5px;
+  border-color: rgb(236, 255, 242);
+  width:100%;
 }
 
 .imagem-artigos{
